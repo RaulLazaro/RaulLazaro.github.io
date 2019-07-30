@@ -17,7 +17,7 @@ function draw() {
     t += 0.01;
 
     canvas = document.getElementById('defaultCanvas0');
-    StackBlur.canvasRGB(canvas, 0, 0, width - 0.25 * 4, height - 0.25 * 4, 36);
+    StackBlur.canvasRGB(canvas, 0, 0, canvas.width, canvas.height, 36);
     filter(POSTERIZE, 20);
 }
 
