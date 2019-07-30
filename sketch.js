@@ -3,6 +3,7 @@ var t = 0;
 function setup() {
     createCanvas(windowWidth, windowHeight);
     noStroke();
+    pixelDensity(1);
     frameRate(15);
 }
 
