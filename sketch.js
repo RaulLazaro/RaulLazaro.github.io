@@ -1,29 +1,50 @@
+// var simplex = new SimplexNoise(),
+//     canvas = document.getElementById('c'),
+//     ctx = canvas.getContext('2d'),
+//     imgdata = ctx.getImageData(0, 0, canvas.width, canvas.height),
+//     data = imgdata.data,
+//     t = 0;
+
+var t = 0;
+
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    pixelDensity(1);
+    noStroke();
+    frameRate(15);
 }
 
 function draw() {
-    loadPixels();
-    let d = pixelDensity();
-    for (let x = 0; x < windowWidth; x++) {
-        for (let y = 0; y < windowHeight; y++) {
-            for (let i = 0; i < d; i++) {
-                for (let j = 0; j < d; j++) {
-                    let n = noise(x / 40, y / 40, frameCount / 20) * 255;
-                    let idx = 4 * ((y * d + j) * windowWidth * d + (x * d + i));
-                    pixels[idx] = n;        //r
-                    pixels[idx + 1] = n;    //g
-                    pixels[idx + 2] = n;    //b
-                    pixels[idx + 3] = 255;  //a
-                }
-            }
-        }
-    }
-    updatePixels();
-    filter(BLUR, 36);
-    filter(POSTERIZE, 19);
+    for (var x = 0; x < width; x+=10) {
+		for (var y = 0; y < height; y+=10) {
+			var c = noise(0.01 * x, 0.01 * y, t);
+			fill(c * 255);
+			rect(x, y, 10, 10);
+		}		
+      }
+    t += 0.1;
+
+    canvas = document.getElementById('defaultCanvas0');
+    StackBlur.canvasRGB(canvas, 0, 0, width-1 *2, height-1 *2, 36);
 }
+
+function blur() {
+    canvas = document.getElementById('defaultCanvas0');
+    StackBlur.canvasRGBA(canvas, 0, 0, width, height, 30);
+}
+// window.setInterval(function () {
+//     for (var x = 0; x < canvas.width; x++) {
+//         for (var y = 0; y < canvas.height; y++) {
+//             var r = simplex.noise3D(x / 16, y / 16, t / 16) * 0.5 + 0.5;
+//             //var g = simplex.noise3D(x / 8, y / 8, t / 16) * 0.5 + 0.5;
+//             data[(x + y * 256) * 4 + 0] = r * 255;
+//             //data[(x + y * 256) * 4 + 1] = (r + g) * 200;
+//             data[(x + y * 256) * 4 + 2] = 0;
+//             data[(x + y * 256) * 4 + 3] = 255;
+//         }
+//     }
+//     t++;
+//     ctx.putImageData(imgdata, 0, 0);
+// }, 1000 / 10);
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
