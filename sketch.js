@@ -14,17 +14,18 @@ function setup() {
 }
 
 function draw() {
-    for (var x = 0; x < width; x+=10) {
-		for (var y = 0; y < height; y+=10) {
-			var c = noise(0.01 * x, 0.01 * y, t);
-			fill(c * 255);
-			rect(x, y, 10, 10);
+    for (var x = 0; x < width; x+=20) {
+		for (var y = 0; y < height; y+=20) {
+			var c = noise(0.02 * x, 0.02 * y, t);
+			fill(c * 0, c * 0, c * 255);
+			rect(x, y, 20, 20);
 		}		
       }
-    t += 0.1;
+    t += 0.01;
 
     canvas = document.getElementById('defaultCanvas0');
-    StackBlur.canvasRGB(canvas, 0, 0, width-1 *2, height-1 *2, 36);
+    StackBlur.canvasRGB(canvas, 0, 0, width-0.25 *4, height-0.25 *4, 36);
+    filter(POSTERIZE, 20);
 }
 
 function blur() {
