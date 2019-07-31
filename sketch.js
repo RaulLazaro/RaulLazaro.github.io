@@ -2,7 +2,7 @@ var simplex = new SimplexNoise();
 var t = 0;
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(400, 400);
     noStroke();
     pixelDensity(1);
     frameRate(15);
@@ -22,9 +22,11 @@ function draw() {
     canvas = document.getElementById('defaultCanvas0');
     StackBlur.canvasRGB(canvas, 0, 0, canvas.width, canvas.height, 36);
     filter(POSTERIZE, 20);
+    document.getElementById('defaultCanvas0').style.width = "100%";
+    document.getElementById('defaultCanvas0').style.height = "100%";
     console.timeEnd('loop');
 }
 
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-}
+//function windowResized() {
+    //resizeCanvas(windowWidth, windowHeight);
+//}
