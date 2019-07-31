@@ -12,7 +12,7 @@ function draw() {
     console.time('loop');
     for (var x = 0; x < width; x += 20) {
         for (var y = 0; y < height; y += 20) {
-            var c = simplex.noise3D(0.02 * x, 0.02 * y, t)* 0.5 + 0.5;
+            var c = simplex.noise3D(0.02 * x/width, 0.02 * y/height, t)* 0.5 + 0.5;
             fill(c * 0, c * 0, c * 255);
             rect(x, y, 20, 20);
         }
