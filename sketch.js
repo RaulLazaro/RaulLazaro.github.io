@@ -8,6 +8,7 @@ function setup() {
 }
 
 function draw() {
+    console.time('loop');
     for (var x = 0; x < width; x += 20) {
         for (var y = 0; y < height; y += 20) {
             var c = noise(0.02 * x, 0.02 * y, t);
@@ -20,6 +21,7 @@ function draw() {
     canvas = document.getElementById('defaultCanvas0');
     StackBlur.canvasRGB(canvas, 0, 0, canvas.width, canvas.height, 36);
     filter(POSTERIZE, 20);
+    console.timeEnd('loop');
 }
 
 function windowResized() {
