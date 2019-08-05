@@ -1,6 +1,6 @@
 var simplex = new SimplexNoise();
 var t = 0;
-
+var col=[[0, 255, 255], [0, 204, 255], [0, 153, 255], [0, 102, 255], [0, 51, 255], [0, 0, 255], [0, 0, 229], [0, 0, 178], [0, 0, 127], [0, 0, 76]];
 function setup() {
     createCanvas(400, 400);
     pixelDensity(1);
@@ -15,11 +15,10 @@ function draw() {
         for (var y = 0; y < height; y++) {
             var index = (x + y * width) * 4;
             var n = simplex.noise3D(3 * x / 500, 3 * y / 500, t) * 0.5 + 0.5;
-            n = Math.round(n * 10) / 10;
-
-            pixels[index + 0] = 25 * n;       //r
-            pixels[index + 1] = 20 * n;       //g
-            pixels[index + 2] = 220 * n;       //b
+            n = Math.round(n * 9);
+            pixels[index + 0] = col[n][0];       //r
+            pixels[index + 1] = col[n][1];       //g
+            pixels[index + 2] = col[n][2];       //b
             pixels[index + 3] = 255;
         }
     }
