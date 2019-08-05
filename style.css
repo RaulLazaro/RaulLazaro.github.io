@@ -2,8 +2,10 @@ html, body {
     margin: 0;
   }
   
-  canvas {
+canvas {
     position: absolute;
     top: 0px;
+    left: 0px;
+
     z-index: -1;
   }
