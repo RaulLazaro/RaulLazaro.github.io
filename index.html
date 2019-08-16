@@ -11,9 +11,9 @@
     <link href="animate.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a9d5035d99.js"></script>
     <script language="javascript" type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+        src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
     <script language="javascript" type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+        src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script language="javascript" type="text/javascript"
         src="https://cdn.rawgit.com/jwagner/simplex-noise.js/87440528bcf8ec89840e974d8f76cfe3da548c37/simplex-noise.min.js"></script>
 
@@ -30,8 +30,11 @@
         <i class="fas fa-sun" onclick="lightMode()"></i>
         <i class="fas fa-moon" onclick="darkMode()"></i>
         <i class="fas fa-random" onclick="randomMode()"></i>
-        <i class="fas fa-cog" onclick="customMode()"></i>
+        <i id="custom" class="fas fa-cog" onclick="customModeOpen()"></i>
         <i class="fas fa-redo" onclick="refresh()"></i>
+    </div>
+    <div id="customColor">
+
     </div>
     <script language="javascript" type="text/javascript" src="sketch.js"></script>
     </body>
