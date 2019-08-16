@@ -6,10 +6,6 @@ var slider;
 function setup() {
     createCanvas(windowWidth, windowHeight);
     pixelDensity(d);
-    slider = createSlider(0,2000,1000);
-    slider.input(paper);
-    var button = createButton("config");
-    button.mousePressed(refresh);
     paper();
 }
 
@@ -18,7 +14,7 @@ function paper() {
     for (var x = 0; x < width * d; x++) {
         for (var y = 0; y < height * d; y++) {
             var index = (x + y * width * d) * 4;
-            var n = simplex.noise2D(3 * x / slider.value(), 3 * y / slider.value()) * 0.5 + 0.5;
+            var n = simplex.noise2D(3 * x / 1000, 3 * y / 1000) * 0.5 + 0.5;
             n = Math.round(n * 9);
             pixels[index + 0] = col[n][0];       //r
             pixels[index + 1] = col[n][1];       //g
