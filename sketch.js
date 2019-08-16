@@ -1,7 +1,7 @@
 var simplex = new SimplexNoise();
 var d = 2;
 var col = [[0, 255, 255], [0, 204, 255], [0, 153, 255], [0, 102, 255], [0, 51, 255], [0, 0, 255], [0, 0, 229], [0, 0, 178], [0, 0, 127], [0, 0, 76]];
-var slider;
+var inputColor = [];
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -30,15 +30,21 @@ function menu(x) {
     var y = document.getElementById("js");
     if (y.className === "flex-v") {
         y.className += " active";
-        const element =  document.querySelector('.flex-v')
-    element.classList.add('animated', 'fadeInRight')
+        const element = document.querySelector('.flex-v')
+        element.classList.add('animated', 'fadeInRight')
     } else {
         y.className = "flex-v";
+    }
+    if (inputColor[0]) {
+        customModeClose()
     }
 }
 
 function lightMode() {
     var color = 255;
+    if (inputColor[0]) {
+        customModeClose()
+    }
     for (var i = 0; i < 10; i++) {
         col[i][0] = color;
         col[i][1] = color;
@@ -50,6 +56,9 @@ function lightMode() {
 
 function darkMode() {
     var color = 0;
+    if (inputColor[0]) {
+        customModeClose()
+    }
     for (var i = 0; i < 10; i++) {
         col[i][0] = color;
         col[i][1] = color;
@@ -60,15 +69,43 @@ function darkMode() {
 }
 
 function randomMode() {
+    if (inputColor[0]) {
+        customModeClose()
+    }
     for (var i = 0; i < 10; i++) {
-        col[i][0] = random(255);
-        col[i][1] = random(255);
-        col[i][2] = random(255);
+        col[i][0] = Math.round(random(255));
+        col[i][1] = Math.round(random(255));
+        col[i][2] = Math.round(random(255));
     }
     paper();
 }
 
-function customMode() {
+function customModeOpen() {
+    for (var i = 0; i < 10; i++) {
+        inputColor[i] = createInput("#" + hex(col[i][0], 2) + hex(col[i][1], 2) + hex(col[i][2], 2), 'color');
+        inputColor[i].parent('customColor');
+    }
+    document.getElementById("custom").onclick = customModeClose;
+    for (var i = 0; i < 10; i++) {
+        inputColor[i].input(update);
+    }
+}
+
+function update() {
+    for (var i = 0; i < 10; i++) {
+        var c = color(inputColor[i].value());
+        col[i][0] = red(c);
+        col[i][1] = green(c);
+        col[i][2] = blue(c);
+    }
+    paper();
+}
+
+function customModeClose() {
+    for (var i = 0; i < 10; i++) {
+        inputColor[i].remove();
+    }
+    document.getElementById("custom").onclick = customModeOpen;
 }
 
 function refresh() {
