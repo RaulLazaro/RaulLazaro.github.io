@@ -25,6 +25,52 @@ function paper() {
     updatePixels();
 }
 
+function menu(x) {
+    x.classList.toggle("is-active");
+    var y = document.getElementById("js");
+    if (y.className === "flex-v") {
+        y.className += " active";
+        const element =  document.querySelector('.flex-v')
+    element.classList.add('animated', 'fadeInRight')
+    } else {
+        y.className = "flex-v";
+    }
+}
+
+function lightMode() {
+    var color = 255;
+    for (var i = 0; i < 10; i++) {
+        col[i][0] = color;
+        col[i][1] = color;
+        col[i][2] = color;
+        color = color - 10;
+    }
+    paper();
+}
+
+function darkMode() {
+    var color = 0;
+    for (var i = 0; i < 10; i++) {
+        col[i][0] = color;
+        col[i][1] = color;
+        col[i][2] = color;
+        color = color + 10;
+    }
+    paper();
+}
+
+function randomMode() {
+    for (var i = 0; i < 10; i++) {
+        col[i][0] = random(255);
+        col[i][1] = random(255);
+        col[i][2] = random(255);
+    }
+    paper();
+}
+
+function customMode() {
+}
+
 function refresh() {
     simplex = new SimplexNoise();
     paper();
