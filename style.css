@@ -39,3 +39,18 @@ canvas {
 .active {
   display: flex;
 }
+
+#customColor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 50px;
+  right: 52.5px;
+}
+
+#customColor input{
+  border: none;
+  padding: 0;
+  background-color: black;
+}
