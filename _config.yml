@@ -1,0 +1,109 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: "RaulLazaro"
+email: contacto@raullazaro.com
+description: "Web personal de Raul Lazaro"
+url: https://raullazaro.com # the base hostname & protocol for your site, e.g. http://example.com
+baseurl:
+lang: es_ES
+logo: 
+
+# SEO
+twitter:
+  username: RaulLazaro_S
+facebook:
+  publisher: RaulLazaro.San
+  app_id:
+telegram:
+canalTelegram:
+instagram:
+social:
+  type: Person # Person or Organization (defaults to Person)
+  links: # An array of links to social media profiles
+    - https://twitter.com/RaulLazaro_S
+    - https://www.facebook.com/RaulLazaro.San
+    - https://www.instagram.com/raullazaro_s
+
+webmaster_verifications:
+  google:
+  bing:
+  alexa:
+  yandex:
+  baidu:
+
+google_analytics:
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  # parse markdown inside block-level HTML tag
+  parse_block_html: true
+sass:
+  style: compressed
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+# Outputting
+permalink: pretty
+paginate: 9 # amount of posts to show
+paginate_path: /noticias/:num/
+timezone: Europe/Madrid # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: posts
+  - scope:
+      path: ""
+      type: pages
+    values:
+      image: #/assets/logos/logo.png
+include:
+  - _pages
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+keep_files: [media]

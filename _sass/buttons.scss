@@ -1,0 +1,47 @@
+.primary {background-color: $primary;}
+.primary:hover {background-color: mix(white, $primary, 20%);}
+.primary:active {background-color: mix(black, $primary, 20%);}
+.secondary {background-color: $secondary;}
+.secondary:hover {background-color: mix(white, $secondary, 20%);}
+.secondary:active {background-color: mix(black, $secondary, 20%);}
+.dark {background-color: $dark;}
+.dark:hover {background-color: mix(white, $dark, 20%);}
+.dark:active {background-color: mix(black, $dark, 20%);}
+.light {background-color: $light;}
+.light:hover {background-color: mix(white, $light, 20%);}
+.light:active {background-color: mix(black, $light, 20%);}
+.lighter {background-color: $lighter;}
+.lighter:hover {background-color: mix(white, $lighter, 20%);}
+.lighter:active {background-color: mix(black, $lighter, 20%);}
+.white {background-color: $white;}
+.white:hover {background-color: mix(white, $white, 20%);}
+.white:active {background-color: mix(black, $white, 20%);}
+.success {background-color: $success;}
+.success:hover {background-color: mix(white, $success, 20%);}
+.success:active {background-color: mix(black, $success, 20%);}
+.warning{background-color: $warning;}
+.warning:hover {background-color: mix(white, $warning, 20%);}
+.warning:active {background-color: mix(black, $warning, 20%);}
+.info {background-color: $info;}
+.info:hover {background-color: mix(white, $info, 20%);}
+.info:active {background-color: mix(black, $info, 20%);}
+.danger {background-color: $danger;}
+.danger:hover {background-color: mix(white, $danger, 20%);}
+.danger:active {background-color: mix(black, $danger, 20%);}
+
+.sharp {border-radius: 0px;}
+.b4px {border-radius: 4px;}
+.b8px {border-radius: 8px;}
+.b100px {border-radius: 100px;}
+
+.btn {
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+@media (min-width: 576px) {
+  .btn-sm {
+    padding: 16px 24px;
+    text-decoration: none;
+  }
+}

@@ -1,42 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="style.css" rel="stylesheet">
-    <link href="hamburgers.css" rel="stylesheet">
-    <link href="animate.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a9d5035d99.js"></script>
-    <script language="javascript" type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
-    <script language="javascript" type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
-    <script language="javascript" type="text/javascript"
-        src="https://cdn.rawgit.com/jwagner/simplex-noise.js/87440528bcf8ec89840e974d8f76cfe3da548c37/simplex-noise.min.js"></script>
-
-</head>
-
-<body">
-    <h1>hola</h1>
-    <div class="menu hamburger hamburger--slider" onclick="menu(this)">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </div>
-    <div class="flex-v" id="js">
-        <i class="fas fa-sun" onclick="lightMode()"></i>
-        <i class="fas fa-moon" onclick="darkMode()"></i>
-        <i class="fas fa-random" onclick="randomMode()"></i>
-        <i id="custom" class="fas fa-cog" onclick="customModeOpen()"></i>
-        <i class="fas fa-redo" onclick="refresh()"></i>
-    </div>
-    <div id="customColor">
-
-    </div>
-    <script language="javascript" type="text/javascript" src="sketch.js"></script>
-    </body>
-
-</html>
+---
+layout: default
+---
+<h1>Raúl Lázaro Sánchez</h1>
+<div class="menu hamburger hamburger--slider" onclick="menu(this)">
+    <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+    </span>
+</div>
+<div class="flex-v" id="js">
+    <i class="fas fa-sun" onclick="lightMode()"></i>
+    <i class="fas fa-moon" onclick="darkMode()"></i>
+    <i class="fas fa-random" onclick="randomMode()"></i>
+    <i id="custom" class="fas fa-cog" onclick="customModeOpen()"></i>
+    <i class="fas fa-redo" onclick="refresh()"></i>
+</div>
+<div id="customColor"></div>
