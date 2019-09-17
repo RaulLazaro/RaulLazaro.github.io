@@ -1,20 +1,21 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
+
 @charset "utf-8";
 
-$primary: #008BD2;
-$secondary: #485DC5;
-$dark: #2D2F3B;
-$light: #DADADA;
-$lighter: rgba(218,218,218,0.20);
-$white: #FFFFFF;
-$success: #2ED44C;
-$warning: #F1C238;
-$info: #3CE5E4;
-$danger: #EC3030;
-$hover: rgba(255,255,255,0.20);
-$pressed: rgba(0,0,0,0.20);
+$primary: #008bd2;
+$secondary: #485dc5;
+$dark: #2d2f3b;
+$light: #dadada;
+$lighter: rgba(218, 218, 218, 0.2);
+$white: #ffffff;
+$success: #2ed44c;
+$warning: #f1c238;
+$info: #3ce5e4;
+$danger: #ec3030;
+$hover: rgba(255, 255, 255, 0.2);
+$pressed: rgba(0, 0, 0, 0.2);
 
 @import "normalize.scss";
 
@@ -28,7 +29,7 @@ $pressed: rgba(0,0,0,0.20);
 
 @import "animate.scss";
 
-@import "hamburger.scss";
+@import "dark.scss";
 
 @import "bootstrap/functions";
 @import "bootstrap/variables";
@@ -41,8 +42,8 @@ $pressed: rgba(0,0,0,0.20);
 }
 
 .shadow {
-  -webkit-filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+  -webkit-filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 canvas {
@@ -52,33 +53,31 @@ canvas {
   z-index: -1;
 }
 
-.hamburger {
+.flex-v {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hamburguer {
   position: fixed;
   top: 10px;
   right: 10px;
 }
 
-.flex-v {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  top: 50px;
-  right: 12.5px;
-}
-
-.hamburger:hover,
-.flex-v i:hover{
+#menu i:hover {
   background-color: gray;
   opacity: 0.7;
   border-radius: 50%;
 }
 
-.flex-v i{
+.flex-v i {
   padding: 10px;
   cursor: pointer;
 }
 
+.inactive {
+  display: none;
+}
 .active {
   display: flex;
 }
@@ -92,7 +91,7 @@ canvas {
   right: 52.5px;
 }
 
-#customColor input{
+#customColor input {
   border: none;
   padding: 0;
   background-color: black;
@@ -103,7 +102,6 @@ a {
   color: black;
 }
 
-/* Add a hover effect if you want */
 .social:hover {
   opacity: 0.7;
 }

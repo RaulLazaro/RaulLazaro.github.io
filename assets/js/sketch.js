@@ -6,7 +6,11 @@ var inputColor = [];
 function setup() {
     createCanvas(windowWidth, windowHeight);
     pixelDensity(d);
-    paper();
+
+    if (localStorage.getItem('mode') === null)
+        matchMedia('(prefers-color-scheme: dark)').matches ? darkMode() : lightMode()
+    else
+        localStorage.getItem('mode') === 'dark' ? darkMode() : lightMode()
 }
 
 function paper() {
@@ -26,14 +30,13 @@ function paper() {
 }
 
 function menu(x) {
-    x.classList.toggle("is-active");
-    var y = document.getElementById("js");
-    if (y.className === "flex-v") {
-        y.className += " active";
-        const element = document.querySelector('.flex-v')
-        element.classList.add('animated', 'fadeInRight')
+    var y = document.getElementById("menu");
+    if (y.className === "inactive") {
+        y.className = "flex-v active animated fadeInRight";
+        x.className = "fas fa-times fa-2x";
     } else {
-        y.className = "flex-v";
+        y.className = "inactive";
+        x.className = "fas fa-bars fa-2x";
     }
     if (inputColor[0]) {
         customModeClose()
@@ -52,6 +55,8 @@ function lightMode() {
         color = color - 10;
     }
     paper();
+    localStorage.setItem('mode', 'light');
+    document.querySelector('body').classList.remove('dark');
 }
 
 function darkMode() {
@@ -66,6 +71,8 @@ function darkMode() {
         color = color + 10;
     }
     paper();
+    localStorage.setItem('mode', 'dark');
+    document.querySelector('body').classList.add('dark');
 }
 
 function randomMode() {

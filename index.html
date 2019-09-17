@@ -11,16 +11,15 @@ layout: default
     <a href="#"><i class="fab fa-linkedin-in fa-2x"></i></a>
     <a href="#"><i class="far fa-envelope fa-2x"></i></a>
 </div>
-<div class="menu hamburger hamburger--slider" onclick="menu(this)">
-    <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-    </span>
-</div>
-<div class="flex-v" id="js">
-    <i class="fas fa-sun" onclick="lightMode()"></i>
-    <i class="fas fa-moon" onclick="darkMode()"></i>
-    <i class="fas fa-random" onclick="randomMode()"></i>
-    <i id="custom" class="fas fa-cog" onclick="customModeOpen()"></i>
-    <i class="fas fa-redo" onclick="refresh()"></i>
+
+<div class="flex-v hamburguer" id="js">
+    <i class="fas fa-bars fa-2x" onclick="menu(this)"></i>
+    <div class="inactive" id="menu">
+        <i class="fas fa-sun" onclick="lightMode()"></i>
+        <i class="fas fa-moon" onclick="darkMode()"></i>
+        <i class="fas fa-random" onclick="randomMode()"></i>
+        <i id="custom" class="fas fa-cog" onclick="customModeOpen()"></i>
+        <i class="fas fa-redo" onclick="refresh()"></i>
+    </div>
 </div>
 <div id="customColor"></div>

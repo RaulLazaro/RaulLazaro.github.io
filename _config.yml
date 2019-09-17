@@ -19,7 +19,7 @@ description: "Web personal de Raul Lazaro"
 url: https://raullazaro.com # the base hostname & protocol for your site, e.g. http://example.com
 baseurl:
 lang: es_ES
-logo: 
+logo:
 
 # SEO
 twitter:
