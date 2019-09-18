@@ -27,15 +27,17 @@ twitter:
 facebook:
   publisher: RaulLazaro.San
   app_id:
-telegram:
-canalTelegram:
-instagram:
+instagram: raullazaro_s
+github: RaulLazaro
+linkedin: raullazaro
 social:
   type: Person # Person or Organization (defaults to Person)
   links: # An array of links to social media profiles
     - https://twitter.com/RaulLazaro_S
     - https://www.facebook.com/RaulLazaro.San
     - https://www.instagram.com/raullazaro_s
+    - https://github.com/RaulLazaro
+    - https://www.linkedin.com/in/raullazaro/
 
 webmaster_verifications:
   google:
