@@ -21,7 +21,7 @@ $pressed: rgba(0, 0, 0, 0.2);
 
 @import "grid.scss";
 
-@import "typography.scss";
+//@import "typography.scss";
 
 @import "buttons.scss";
 
@@ -47,7 +47,7 @@ $pressed: rgba(0, 0, 0, 0.2);
 }
 
 canvas {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   z-index: -1;
@@ -62,11 +62,11 @@ canvas {
 .flex-h {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: initial;
 }
 
 .hamburguer {
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
 }
@@ -110,19 +110,27 @@ a {
 }
 
 #avatar {
-  width: 150px;
+  min-width: 150px;
   height: 150px;
   background-image: url("{{site.url}}{{site.baseurl}}/assets/media/avatar.jpg");
   border-radius: 50%;
   background-size: cover;
-  margin-top: 50px;
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  
+}
+
+#name {
+  margin-right: 30px
 }
 
 .social {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .card{
-  background: #ffffff;
-  opacity: 0.5;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  padding: 15px;
 }
