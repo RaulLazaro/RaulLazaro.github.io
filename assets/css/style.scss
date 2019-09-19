@@ -42,8 +42,8 @@ $pressed: rgba(0, 0, 0, 0.2);
 }
 
 .shadow {
-  -webkit-filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.5));
 }
 
 canvas {
@@ -131,4 +131,5 @@ a {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   padding: 15px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255,0.5);
 }
