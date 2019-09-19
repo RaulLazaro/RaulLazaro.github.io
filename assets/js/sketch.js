@@ -4,7 +4,7 @@ var col = [[0, 255, 255], [0, 204, 255], [0, 153, 255], [0, 102, 255], [0, 51, 2
 var inputColor = [];
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(windowWidth, windowHeight+100);
     pixelDensity(d);
 
     if (localStorage.getItem('mode') === null)
@@ -121,6 +121,6 @@ function refresh() {
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
+    resizeCanvas(windowWidth, windowHeight+100);
     paper()
 }
