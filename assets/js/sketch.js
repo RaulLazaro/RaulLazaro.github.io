@@ -74,7 +74,7 @@ function darkMode() {
     localStorage.setItem('mode', 'dark');
     document.querySelector('body').classList.add('dark');
 }
-
+//cambiar a escala de un color y que se guarde entre sesiones
 function randomMode() {
     if (inputColor[0]) {
         customModeClose()
@@ -86,7 +86,7 @@ function randomMode() {
     }
     paper();
 }
-
+//guardar combinacion entre sesiones
 function customModeOpen() {
     for (var i = 0; i < 10; i++) {
         inputColor[i] = createInput("#" + hex(col[i][0], 2) + hex(col[i][1], 2) + hex(col[i][2], 2), 'color');
