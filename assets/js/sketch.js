@@ -18,11 +18,19 @@ function setup() {
   createCanvas(windowWidth, windowHeight + 100);
   pixelDensity(d);
 
-  if (localStorage.getItem("mode") === null)
-    matchMedia("(prefers-color-scheme: dark)").matches
-      ? darkMode()
-      : lightMode();
-  else localStorage.getItem("mode") === "dark" ? darkMode() : lightMode();
+  if (localStorage.getItem("color") !== null && localStorage.getItem("color") !== "") {
+    col = JSON.parse(localStorage.getItem("color"));
+    localStorage.getItem("mode") === "dark"
+      ? document.querySelector("body").classList.add("dark")
+      : document.querySelector("body").classList.remove("dark");
+    paper();
+  } else {
+    if (localStorage.getItem("mode") === null)
+      matchMedia("(prefers-color-scheme: dark)").matches
+        ? darkMode()
+        : lightMode();
+    else localStorage.getItem("mode") === "dark" ? darkMode() : lightMode();
+  }
 }
 
 function paper() {
@@ -68,6 +76,7 @@ function lightMode() {
   }
   paper();
   localStorage.setItem("mode", "light");
+  localStorage.setItem("color", "");
   document.querySelector("body").classList.remove("dark");
 }
 
@@ -84,21 +93,45 @@ function darkMode() {
   }
   paper();
   localStorage.setItem("mode", "dark");
+  localStorage.setItem("color", "");
   document.querySelector("body").classList.add("dark");
 }
-//cambiar a escala de un color y que se guarde entre sesiones
+
 function randomMode() {
   if (inputColor[0]) {
     customModeClose();
   }
+  do {
+    col1 = [
+      Math.round(random(255)),
+      Math.round(random(255)),
+      Math.round(random(255))
+    ];
+    col2 = [
+      Math.round(random(255)),
+      Math.round(random(255)),
+      Math.round(random(255))
+    ];
+    bri1 = ((col1[0] * 299)+(col1[1] * 587)+(col1[2] * 114))/1000;
+    bri2 = ((col2[0] * 299)+(col2[1] * 587)+(col2[2] * 114))/1000;
+    dif = [
+      (col1[0] - col2[0]) / 9,
+      (col1[1] - col2[1]) / 9,
+      (col1[2] - col2[2]) / 9
+    ];
+  } while (
+    Math.abs(bri1-bri2) < 75
+  );
+
   for (var i = 0; i < 10; i++) {
-    col[i][0] = Math.round(random(255));
-    col[i][1] = Math.round(random(255));
-    col[i][2] = Math.round(random(255));
+    col[i][0] = Math.round(col1[0] - dif[0] * i);
+    col[i][1] = Math.round(col1[1] - dif[1] * i);
+    col[i][2] = Math.round(col1[2] - dif[2] * i);
   }
   paper();
+  localStorage.setItem("color", JSON.stringify(col));
 }
-//guardar combinacion entre sesiones
+
 function customModeOpen() {
   for (var i = 0; i < 10; i++) {
     inputColor[i] = createInput(
@@ -121,6 +154,7 @@ function update() {
     col[i][2] = blue(c);
   }
   paper();
+  localStorage.setItem("color", JSON.stringify(col));
 }
 
 function customModeClose() {
