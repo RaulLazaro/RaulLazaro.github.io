@@ -5,5 +5,19 @@ title: Categorias
 ---
 <div class="container">
     <h1 class="center shadow">Categorias</h1>
-
+    <div id="archives">
+        {% for category in site.categories %}
+        <div class="archive-group">
+            {% capture category_name %}{{ category | first }}{% endcapture %}
+            <br>
+            <a name="{{ category_name | slugize }}"></a>
+            <h2 id="#{{ category_name | slugize }}" class="category-head">{{ category_name }}</h2>
+            <div class="row">
+                {% for post in site.categories[category_name] %}
+                {% include card.html %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
