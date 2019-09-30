@@ -107,5 +107,3 @@ include:
 #   - vendor/ruby/
 
 keep_files: [media]
-
-categories: [Tech, Personal, Prueba]
