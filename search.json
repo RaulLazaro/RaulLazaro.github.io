@@ -7,8 +7,7 @@
       "title"    : "{{ post.title | strip_html | escape }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
       "image"    : "{{site.url}}{{ site.baseurl }}{{ post.image }}",
-      "category" : "{{post.categories | join: ', '}}",
-      "tags"     : "{{ post.tags | join: ', ' }}",
+      "tags"     : "{{ post.tags | join: ' ' }}",
       "date"     : "{{ post.date | date: "%d/%m/%Y" }}",
       "description" : "{{post.description | strip_html | strip_newlines | escape }}"
 

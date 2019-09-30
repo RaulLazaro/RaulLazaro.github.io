@@ -1,0 +1,15 @@
+---
+layout: pages
+---
+{% if site.tags != "" %}
+{% include collecttags.html %}
+{% endif %}
+
+<div class="container">
+    <h1 class="center shadow">{{ page.tag }}</h1>
+    <div class="row">
+        {% for post in site.tags[page.tag] %}
+        {% include card.html %}
+        {% endfor %}
+    </div>
+</div>
