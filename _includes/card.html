@@ -6,9 +6,11 @@
                 <h4 class="card-title">{{ post.title }}</h4>
                 <small class="card-date"><i class="fa fa-calendar-o"></i>
                     {{ post.date | date: "%d/%m/%Y" }}</small>
-                {% if post.description %}
                 <p class="card-description">{{ post.description }}</p>
-                {% endif %}
+                <small class="card-categories"><i class="fa fa-tags"></i>
+                    {% for category in post.categories %}
+                    {{category}}{% unless forloop.last %},
+                    {% endunless %}{% endfor %}</small>
             </div>
         </div>
     </a>

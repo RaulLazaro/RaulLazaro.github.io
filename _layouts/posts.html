@@ -16,7 +16,11 @@ layout: pages
     <br>
     <img class="post-img shadow" src="{{ site.baseurl }}{{ page.image }}" alt="" />
     <h1 class="center shadow">{{ page.title }}</h1>
-    <p class="center shadow"><i class="fa fa-calendar-o"></i> {{ page.date | date: "%d/%m/%Y" }}</p>
+    <p class="center shadow"><i class="fa fa-calendar-o"></i> {{ page.date | date: "%d/%m/%Y" }}
+        <i class="fa fa-tags"></i> {% for category in page.categories %}
+        <a href="{{ site.url }}{{ site.baseurl }}/categorias/#{{category|slugize}}">{{category}}</a>{% unless forloop.last %},
+        {% endunless %}{% endfor %}
+    </p>
 </div>
 
 <div class="post-background">
