@@ -18,7 +18,7 @@ email: contacto@raullazaro.com
 description: "Web personal de Raul Lazaro"
 url: https://raullazaro.com # the base hostname & protocol for your site, e.g. http://example.com
 baseurl:
-lang: es_ES
+lang: es
 logo: /assets/media/avatar.jpg
 
 # SEO
@@ -77,8 +77,6 @@ whitelist:
 
 # Outputting
 permalink: pretty
-paginate: 9 # amount of posts to show
-paginate_path: /noticias/:num/
 timezone: Europe/Madrid # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Defaults

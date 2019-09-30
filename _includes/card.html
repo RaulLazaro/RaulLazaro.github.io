@@ -1,0 +1,15 @@
+<div class="col-12 col-sm-6 col-lg-4">
+    <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
+        <div class="card">
+            <img class="card-img-top img-fluid" src="{{ site.url }}{{ site.baseurl }}{{ post.image }}" />
+            <div class="card-body">
+                <h4 class="card-title">{{ post.title }}</h4>
+                <small class="card-date"><i class="fa fa-calendar-o"></i>
+                    {{ post.date | date: "%d/%m/%Y" }}</small>
+                {% if post.description %}
+                <p class="card-description">{{ post.description }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </a>
+</div>

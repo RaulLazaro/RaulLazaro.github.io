@@ -21,9 +21,9 @@ $pressed: rgba(0, 0, 0, 0.2);
 
 @import "grid.scss";
 
-//@import "typography.scss";
+@import "typography.scss";
 
-@import "buttons.scss";
+//@import "buttons.scss";
 
 @import "navbar.scss";
 
@@ -134,11 +134,35 @@ a {
 .card {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  padding: 15px;
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .card:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-img-top {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  margin: 0px;
+}
+
+.post-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.post-background {
+  background-color: #ffffff;
 }

@@ -1,0 +1,26 @@
+---
+layout: pages
+permalink: /buscar
+---
+<div class="container">
+    <br>
+    <div class="form-group" id="search-container">
+        <input type="text" class="form-control" id="search-input" placeholder="Buscar...">
+        <br>
+        <div style="min-height: 1000px;">
+            <div class="row" id="results-container"></div>
+        </div>
+    </div>
+</div>
+
+<script src="{{site.url}}{{site.baseurl}}/assets/js/search-script.js" type="text/javascript"></script>
+
+<script>
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        searchResultTemplate: '{% include searchcard.html %}',
+        noResultsText: ("<h5 class='ml-3'>SIN RESULTADOS</h5>"),
+        json: '{{ 'search.json' | absolute_url }}'
+})
+</script>

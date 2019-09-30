@@ -1,0 +1,17 @@
+---
+layout: pages
+permalink: /blog
+---
+
+<div class="container">
+    <h2 class="name shadow">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis
+        dignissim pellentesque. Vestibulum et imperdiet nunc. Vestibulum lacinia leo
+        nulla.
+    </h2>
+    <div class="row card-deck">
+        {% for post in site.posts %}
+        {% include card.html %}
+        {% endfor %}
+    </div>
+</div>
