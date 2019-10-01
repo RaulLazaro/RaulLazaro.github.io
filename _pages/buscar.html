@@ -1,6 +1,7 @@
 ---
 layout: pages
 permalink: /buscar
+title: Buscar
 ---
 <div class="container">
     <br>
@@ -12,15 +13,3 @@ permalink: /buscar
         </div>
     </div>
 </div>
-
-<script src="{{site.url}}{{site.baseurl}}/assets/js/search-script.js" type="text/javascript"></script>
-
-<script>
-    SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        searchResultTemplate: '{% include searchcard.html %}',
-        noResultsText: ("<h5 class='ml-3'>SIN RESULTADOS</h5>"),
-        json: '{{ 'search.json' | absolute_url }}'
-})
-</script>
