@@ -173,3 +173,20 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight + 100);
   paper();
 }
+
+function load_disqus() {
+  // Prepare the trigger and target
+  var disqus_target = document.getElementById('disqus_thread');
+
+  // Load script asynchronously only when the trigger and target exist
+  if (disqus_target) {
+      // DON'T EDIT BELOW THIS LINE
+      var d = document,
+          s = d.createElement("script");
+      s.src = "https://raullazaro.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+  }
+}
+
+load_disqus()
