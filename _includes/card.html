@@ -4,10 +4,10 @@
             <img class="card-img-top img-fluid" src="{{ site.url }}{{ site.baseurl }}{{ post.image }}" />
             <div class="card-body">
                 <h4 class="card-title">{{ post.title }}</h4>
-                <small class="card-date"><i class="fa fa-calendar-o"></i>
+                <small class="card-date"><i class="far fa-calendar"></i>
                     {{ post.date | date: "%d/%m/%Y" }}</small>
                 <p class="card-description">{{ post.description }}</p>
-                <small class="card-categories"><i class="fa fa-tags"></i>
+                <small class="card-categories"><i class="fas fa-tags"></i>
                     {% for tag in post.tags %}
                     {{tag}} {% endfor %}</small>
             </div>

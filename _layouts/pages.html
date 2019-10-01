@@ -7,9 +7,14 @@ layout: default
     <a id="avatar" href="{{ site.url }}{{ site.baseurl }}">
       <img class="img-fluid circle shadow" src="{{ site.url }}{{ site.baseurl }}/assets/media/avatar.jpg" alt="" />
     </a>
-    <a class="name shadow social fa-2x bold" href="{{ site.url }}{{ site.baseurl }}/blog">
+    <div class="flex-change">
+    <a class="blog shadow social fa-2x bold" href="{{ site.url }}{{ site.baseurl }}/blog">
       <i class="fab fa-blogger-b"></i> Blog
     </a>
+    <a class="search blog shadow social fa-lg bold" href="{{ site.url }}{{ site.baseurl }}/buscar">
+      <i class="fas fa-search"></i> Buscar
+    </a>
+  </div>
   </div>
 </div>
 {{ content }}

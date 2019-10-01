@@ -16,9 +16,10 @@ layout: pages
     <br>
     <img class="post-img shadow" src="{{ site.baseurl }}{{ page.image }}" alt="" />
     <h1 class="center shadow">{{ page.title }}</h1>
-    <p class="center shadow"><i class="fa fa-calendar-o"></i> {{ page.date | date: "%d/%m/%Y" }}
+    <p class="center shadow">
+        <i class="far fa-calendar"></i> {{ page.date | date: "%d/%m/%Y" }}&emsp;&emsp;&emsp;
         <i class="fa fa-tags"></i> {% for tag in page.tags %}
-        <a href="{{ site.url }}{{ site.baseurl }}/{{tag}}">{{tag}} </a>{% endfor %}
+        <a href="{{ site.url }}{{ site.baseurl }}/{{tag}}">{{tag}}</a>&emsp;{% endfor %}
     </p>
 </div>
 
