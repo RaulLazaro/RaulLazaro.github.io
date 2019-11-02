@@ -33,16 +33,9 @@ permalink: /404
     <br>
 </div>
 <script>
-    var url = $(location).attr('href');
-    url = url.toLowerCase();
-    $.ajax({
-        url: url,
-        method: "HEAD"
-    })
-        .done(function () {
-            window.location = url;
-        })
-        .fail(function () {
-            window.location = '/';
-        });
+    var originalUrl = window.location.href;
+    var lowerCaseUrl = originalUrl.toLowerCase();
+    if (originalUrl !== lowerCaseUrl) {
+        window.location = lowerCaseUrl;
+    }
 </script>
