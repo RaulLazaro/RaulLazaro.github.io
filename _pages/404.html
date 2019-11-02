@@ -2,6 +2,13 @@
 layout: pages
 permalink: /404
 ---
+<script>
+    var originalUrl = window.location.href;
+    var lowerCaseUrl = originalUrl.toLowerCase();
+    if (originalUrl !== lowerCaseUrl) {
+        window.location = lowerCaseUrl;
+    }
+</script>
 <div class="container">
     <h1 class="center bold fa-5x">404</h1>
     <h2 class="center">Lo sentimos!</h2>
@@ -32,10 +39,3 @@ permalink: /404
     </div>
     <br>
 </div>
-<script>
-    var originalUrl = window.location.href;
-    var lowerCaseUrl = originalUrl.toLowerCase();
-    if (originalUrl !== lowerCaseUrl) {
-        window.location = lowerCaseUrl;
-    }
-</script>
