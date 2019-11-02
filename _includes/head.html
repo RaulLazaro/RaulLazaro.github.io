@@ -1,4 +1,11 @@
 <head>
+  <script>
+      var originalUrl = window.location.href;
+      var lowerCaseUrl = originalUrl.toLowerCase();
+      if (originalUrl !== lowerCaseUrl) {
+          window.location = lowerCaseUrl;
+      }
+  </script>
   {% seo %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
