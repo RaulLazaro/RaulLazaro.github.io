@@ -1,0 +1,22 @@
+---
+---
+callback([
+  {
+    "text": "inicio",
+    "href": "{{site.url}}{{site.baseurl}}"
+  }
+  {
+    "text": "blog",
+    "href": "{{site.url}}{{site.baseurl}}/blog/"
+  }
+  {
+    "text": "buscar",
+    "href": "{{site.url}}{{site.baseurl}}/buscar/"
+  }
+{% for post in site.posts %}
+  {
+    "text": "{{post.title | replace:'"','\"'}}",
+    "href": "{{site.url}}{{site.baseurl}}{{post.url}}"
+  } {% unless forloop.last %},{% endunless%}
+{% endfor %}
+])

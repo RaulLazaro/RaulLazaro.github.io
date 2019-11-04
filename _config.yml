@@ -96,4 +96,46 @@ defaults:
 include:
   - _pages
 
-keep_files: [media]
+keep_files: [assets/media]
+
+prose:
+  rooturl: '_posts'
+  siteurl: 'https://raullazaro.com/'
+  relativeLinks: 'http://raullazaro.com/links.jsonp'
+  media: 'media'
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "posts"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Titulo"
+          value:
+      - name: "date"
+        field:
+          element: "text"
+          label: "Fecha"
+          value: CURRENT_DATETIME
+      - name: "description"
+        field:
+          element: "text"
+          label: "Descripcion"
+          value:
+      - name: "image"
+        field:
+          element: "text"
+          label: "imagen"
+          value: "/media/"
+      - name: "disqus"
+        field:
+          element: "checkbox"
+          label: "Comentarios"
+          value: true
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Publicar"
+          value: false
