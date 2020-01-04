@@ -125,6 +125,7 @@ a {
 .social {
   margin-right: 20px;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
 }
 
 .social:hover {
@@ -199,6 +200,36 @@ html.is-animating .transition-fade {
 #map {
   width: 100%;
   height: 250px;
+}
+
+#web-view {
+  -ms-zoom: 0.75;
+  -moz-transform: scale(0.75);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.75);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.75);
+  -webkit-transform-origin: 0 0;
+  border: none;
+  margin-bottom: -4px;
+  width: 133%;
+  height: 500px;
+  background-color: white;
+}
+
+.web-card {
+  background-color: rgba(128, 128, 128, 1);
+  border: 10px solid rgba(128, 128, 128, 1);
+  border-radius: 5px;
+}
+
+#web-url {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 4px;
+  padding: 3px;
+  margin: auto;
+  margin-top: 5px;
 }
 
 @media (min-width: 576px) {
