@@ -218,7 +218,7 @@ html.is-animating .transition-fade {
 }
 
 .web-card {
-  background-color: rgba(128, 128, 128, 1);
+  background-color: rgba(128, 128, 128, 1) !important;
   border: 10px solid rgba(128, 128, 128, 1);
   border-radius: 5px;
 }
