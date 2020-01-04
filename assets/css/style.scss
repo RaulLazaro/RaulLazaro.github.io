@@ -184,7 +184,6 @@ html.is-animating .transition-fade {
 .blog {
   width: 110px;
   margin-right: 40px;
-
 }
 
 .flex-change {
@@ -193,8 +192,13 @@ html.is-animating .transition-fade {
   align-items: center;
 }
 
-.search{
+.search {
   margin-top: 30px;
+}
+
+#map {
+  width: 100%;
+  height: 250px;
 }
 
 @media (min-width: 576px) {
@@ -203,8 +207,13 @@ html.is-animating .transition-fade {
     width: 100%;
   }
 
-  .search{
+  .search {
     margin-left: auto;
     margin-top: 0px;
+  }
+
+  #map {
+    width: 100%;
+    height: 500px;
   }
 }
