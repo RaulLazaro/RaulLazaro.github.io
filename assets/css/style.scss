@@ -10,7 +10,7 @@ $dark: #2d2f3b;
 $light: #dadada;
 $lighter: rgba(218, 218, 218, 0.2);
 $white: #ffffff;
-$success: #2ed44c;
+$success: #3bb150;
 $warning: #f1c238;
 $info: #3ce5e4;
 $danger: #ec3030;
@@ -35,6 +35,11 @@ $pressed: rgba(0, 0, 0, 0.2);
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 @import "bootstrap/forms";
+
+.background-filter {
+  background-color: rgba(230, 230, 230, 0.5);
+  min-height: 100vh;
+}
 
 .img-fluid {
   height: auto;
@@ -133,7 +138,7 @@ a {
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(230, 230, 230, 1);
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -197,11 +202,6 @@ html.is-animating .transition-fade {
   margin-top: 30px;
 }
 
-#map {
-  width: 100%;
-  height: 250px;
-}
-
 #web-view {
   -ms-zoom: 0.75;
   -moz-transform: scale(0.75);
@@ -232,6 +232,13 @@ html.is-animating .transition-fade {
   margin-top: 5px;
 }
 
+.map{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
 @media (min-width: 576px) {
   .flex-change {
     flex-direction: row;
@@ -241,10 +248,5 @@ html.is-animating .transition-fade {
   .search {
     margin-left: auto;
     margin-top: 0px;
-  }
-
-  #map {
-    width: 100%;
-    height: 500px;
   }
 }

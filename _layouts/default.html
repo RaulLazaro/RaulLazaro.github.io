@@ -5,21 +5,23 @@
 {% include head.html %}
 
 <body>
-  <div class="flex-v hamburguer shadow">
-    <i class="fas fa-bars fa-2x" onclick="menu(this)"></i>
-    <div class="inactive" id="menu">
-      <i class="fas fa-sun" onclick="lightMode()"></i>
-      <i class="fas fa-moon" onclick="darkMode()"></i>
-      <i class="fas fa-random" onclick="randomMode()"></i>
-      <i id="custom" class="fas fa-cog" onclick="customModeOpen()"></i>
-      <i class="fas fa-redo" onclick="refresh()"></i>
+  <div class="background-filter">
+    <div class="flex-v hamburguer shadow">
+      <i class="fas fa-bars fa-2x" onclick="menu(this)"></i>
+      <div class="inactive" id="menu">
+        <i class="fas fa-sun" onclick="lightMode()"></i>
+        <i class="fas fa-moon" onclick="darkMode()"></i>
+        <i class="fas fa-random" onclick="randomMode()"></i>
+        <i id="custom" class="fas fa-cog" onclick="customModeOpen()"></i>
+        <i class="fas fa-redo" onclick="refresh()"></i>
+      </div>
     </div>
+    <div id="customColor"></div>
+    <main id="swup" class="transition-fade">
+      {{ content }}
+    </main>
+    {% include footer.html %} {% include js.html %}
   </div>
-  <div id="customColor"></div>
-  <main id="swup" class="transition-fade">
-    {{ content }}
-  </main>
-  {% include footer.html %} {% include js.html %}
 </body>
 
 </html>

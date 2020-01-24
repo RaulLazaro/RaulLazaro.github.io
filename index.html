@@ -41,96 +41,99 @@ layout: default
             <i class="far fa-envelope fa-2x"></i>
         </a>
     </div>
-</div>
-<br>
-<br>
-<div class="container">
-    <div class="card card-body"
-        style="background: url({{site.url}}{{site.baseurl}}/assets/media/tfg.png); background-size: cover;">
-        <h3>TFG-ERASMUS</h3>
-        <p>
-            Para la finalización de mis estudios universitarios decidí irme de Erasmus a Bélgica donde realice un TFG
-            bastante interesante sobre robótica y visión artificial
-        </p>
-        <p>
-            El trabajo consistia en diseñar un sistema para detectar y localizar basura en el suelo de los supermercados
-            de la cadena Colruyt Group, la mas grande de Bélgica
-        </p>
-        <div style="text-align: center">
-            <a class="btn success b8px" href="#">Puedes leerlo aquí (Ingles)</a>
-        </div>
-    </div>
-</div>
-<br>
-<div class="container">
-    <div class="card card-body" style="background: url({{site.url}}{{site.baseurl}}/assets/media/infill.png);">
-        <h3>Impresión y Diseño 3D</h3>
-        <p>
-            Desde que se popularizaron las impresoras 3D me interesaron y no dude en construirme una cuanto antes. He
-            ido aprendiendo y mejorando con la práctica hasta ahora que tengo una impresora de diseño propio que
-            funciona muy bien y con la que puedo imprimir diferentes materiales (PLA, PETG, ABS...) en alta calidad.
-        </p>
-        <div style="text-align: center">
-            <a class="btn primary b8px" href="https://raullazaro.com/alu-p3">Impresora Alu-P3</a>
-        </div>
-        <p>
-            Esto también me ha llevado a aprender a diseñar en 3D con varias herramientas como SketchUp, OpenSCAD,
-            FreeCAD, Blender...
-        </p>
-        <div style="text-align: center">
-            <a class="btn primary b8px" href="https://www.thingiverse.com/RaulLazaro/designs">Mis Diseños</a>
-        </div>
-    </div>
-</div>
-<br>
-<div class="container">
-    <div class="card card-body" style="background: url({{site.url}}{{site.baseurl}}/assets/media/cerveza.png);">
-        <h3>Cerveza Artesana</h3>
-        <p>
-            En la carrera nos juntamos varios amigos con una pasión en común, la cerveza! Investigamos y nos fuimos
-            introduciendo en este mundo.
-        </p>
-        <p>
-            Hoy en día contamos con un equipo automatizado de diseño propio para poder realizar hasta 50L de una sola
-            vez, así como varias recetas que hemos ido mejorando.
-        </p>
-    </div>
-</div>
-<br>
-<div class="container">
-    <div class="card card-body">
-        <h3>Una de mis pasiones es viajar ✈</h3>
-        <p>Estos son todos los países que he <span style="color: rgba(0,0,255,1); font-weight: bold;">visitado</span> o
-            <span style="color: rgba(255,0,0,1); font-weight: bold;">vivido</span>.</p>
-        <br>
-        <div id="map"></div>
-    </div>
-</div>
-<br>
-<div class="container">
-    <div class="card-body">
-        <h3>Portfolio</h3>
-        <div class="web-card card">
-            <div class="row">
-                <div class="col-2">
-                    <i class="social fas fa-arrow-left fa-2x" onclick="prev()"></i>
-                </div>
-                <a id="web-link" class="col-8 center" href="https://alumnos.eii.uva.es/">
-                    <h4 id="web-url">alumnos.eii.uva.es</h4>
-                </a>
-                <div class="col-2 text-right">
-                    <i class="social fas fa-arrow-right fa-2x" style="margin: auto;" onclick=" next()"></i>
+    <br>
+    <br>
+    <h2 class="shadow">Poyectos</h2>
+    <div class="row card-deck">
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card">
+                <img class="card-img-top img-fluid" src="{{site.url}}{{site.baseurl}}/assets/media/tfg.png" />
+                <div class="card-body">
+                    <h4 class="card-title">TFG-ERASMUS</h4>
+                    <p class="card-description">
+                        Para la finalización de mis estudios universitarios decidí irme de Erasmus a Bélgica donde
+                        realice un TFG
+                        bastante interesante sobre robótica y visión artificial
+                    </p>
+                    <p class="card-description">
+                        El trabajo consistia en diseñar un sistema para detectar y localizar basura en el suelo de los
+                        supermercados
+                        de la cadena Colruyt Group, la mas grande de Bélgica
+                    </p>
+                    <div style="text-align: center">
+                        <a class="btn success b8px" href="#">Puedes leerlo aquí (Ingles)</a>
+                    </div>
                 </div>
             </div>
-            <div style="overflow: hidden; width: 100%; height: 375px;">
-                <iframe id="web-view" src="https://alumnos.eii.uva.es/"></iframe>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card">
+                <img class="card-img-top img-fluid" src="{{site.url}}{{site.baseurl}}/assets/media/infill.png" />
+                <div class="card-body">
+                    <h4 class="card-title">Impresión y Diseño 3D</h4>
+                    <p class="card-description">
+                        Desde que se popularizaron las impresoras 3D me interesaron y no dude en construirme una
+                        cuanto
+                        antes. He ido aprendiendo y mejorando con la práctica hasta ahora que tengo una impresora de
+                        diseño propio que funciona muy bien y con la que puedo imprimir diferentes materiales (PLA,
+                        PETG, ABS...) en alta calidad.
+                    </p>
+                    <div style="text-align: center">
+                        <a class="btn primary b8px" href="https://raullazaro.com/alu-p3">Impresora Alu-P3</a>
+                    </div>
+                    <p class="card-description">
+                        Esto también me ha llevado a aprender a diseñar en 3D con varias herramientas como SketchUp,
+                        OpenSCAD, FreeCAD, Blender...
+                    </p>
+                    <div style="text-align: center">
+                        <a class="btn primary b8px" href="https://www.thingiverse.com/RaulLazaro/designs">Mis
+                            Diseños</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card">
+                <img class="card-img-top img-fluid" src="{{site.url}}{{site.baseurl}}/assets/media/cerveza.png" />
+                <div class="card-body">
+                    <h4 class="card-title">Cerveza Artesana</h4>
+                    <p class="card-description">
+                        En la carrera nos juntamos varios amigos con una pasión en común, la cerveza! Investigamos y
+                        nos fuimos introduciendo en este mundo.
+                    </p>
+                    <p class="card-description">
+                        Hoy en día contamos con un equipo automatizado de diseño propio para poder realizar hasta
+                        50L de una sola vez, así como varias recetas que hemos ido mejorando.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
+    <br>
+    <h2 class="shadow">Una de mis pasiones es viajar ✈</h2>
+    <p>Estos son todos los países que he <span style="color: rgba(0,0,255,1); font-weight: bold;">visitado</span> o
+        <span style="color: rgba(255,0,0,1); font-weight: bold;">vivido</span>.</p>
+    <br>
+    <img class="img-fluid map" src="{{site.url}}{{site.baseurl}}/assets/media/map.svg" alt="">
+    <br>
+    <h2 class="shadow">Portfolio Web</h2>
+    <div class="web-card card">
+        <div class="row">
+            <div class="col-2">
+                <i class="social fas fa-arrow-left fa-2x" onclick="prev()"></i>
+            </div>
+            <a id="web-link" class="col-8 center" href="https://alumnos.eii.uva.es/">
+                <h4 id="web-url">alumnos.eii.uva.es</h4>
+            </a>
+            <div class="col-2 text-right">
+                <i class="social fas fa-arrow-right fa-2x" style="margin: auto;" onclick=" next()"></i>
+            </div>
+        </div>
+        <div style="overflow: hidden; width: 100%; height: 375px;">
+            <iframe id="web-view" src="https://alumnos.eii.uva.es/"></iframe>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{site.url}}{{site.baseurl}}/assets/js/web-view.js"></script>
+    <br>
+    <br>
 </div>
-<script type="text/javascript" src="{{site.url}}{{site.baseurl}}/assets/js/web-view.js"></script>
-<script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
-<script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
-<script type="text/javascript" src="{{site.url}}{{site.baseurl}}/assets/js/map.js"></script>
-<br>
-<br>

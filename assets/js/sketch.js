@@ -18,19 +18,15 @@ function setup() {
   createCanvas(windowWidth, windowHeight + 100);
   pixelDensity(d);
 
-  if (localStorage.getItem("color") !== null && localStorage.getItem("color") !== "") {
-    col = JSON.parse(localStorage.getItem("color"));
-    localStorage.getItem("mode") === "dark"
+  randomMode();
+
+  if (localStorage.getItem("mode") === null)
+    matchMedia("(prefers-color-scheme: dark)").matches
       ? document.querySelector("body").classList.add("dark")
       : document.querySelector("body").classList.remove("dark");
-    paper();
-  } else {
-    if (localStorage.getItem("mode") === null)
-      matchMedia("(prefers-color-scheme: dark)").matches
-        ? darkMode()
-        : lightMode();
-    else localStorage.getItem("mode") === "dark" ? darkMode() : lightMode();
-  }
+  else localStorage.getItem("mode") === "dark"
+    ? document.querySelector("body").classList.add("dark")
+    : document.querySelector("body").classList.remove("dark");
 }
 
 function paper() {
@@ -64,36 +60,12 @@ function menu(x) {
 }
 
 function lightMode() {
-  var color = 255;
-  if (inputColor[0]) {
-    customModeClose();
-  }
-  for (var i = 0; i < 10; i++) {
-    col[i][0] = color;
-    col[i][1] = color;
-    col[i][2] = color;
-    color = color - 10;
-  }
-  paper();
   localStorage.setItem("mode", "light");
-  localStorage.setItem("color", "");
   document.querySelector("body").classList.remove("dark");
 }
 
 function darkMode() {
-  var color = 0;
-  if (inputColor[0]) {
-    customModeClose();
-  }
-  for (var i = 0; i < 10; i++) {
-    col[i][0] = color;
-    col[i][1] = color;
-    col[i][2] = color;
-    color = color + 10;
-  }
-  paper();
   localStorage.setItem("mode", "dark");
-  localStorage.setItem("color", "");
   document.querySelector("body").classList.add("dark");
 }
 
@@ -112,15 +84,15 @@ function randomMode() {
       Math.round(random(255)),
       Math.round(random(255))
     ];
-    bri1 = ((col1[0] * 299)+(col1[1] * 587)+(col1[2] * 114))/1000;
-    bri2 = ((col2[0] * 299)+(col2[1] * 587)+(col2[2] * 114))/1000;
+    bri1 = ((col1[0] * 299) + (col1[1] * 587) + (col1[2] * 114)) / 1000;
+    bri2 = ((col2[0] * 299) + (col2[1] * 587) + (col2[2] * 114)) / 1000;
     dif = [
       (col1[0] - col2[0]) / 9,
       (col1[1] - col2[1]) / 9,
       (col1[2] - col2[2]) / 9
     ];
   } while (
-    Math.abs(bri1-bri2) < 75
+    Math.abs(bri1 - bri2) < 75
   );
 
   for (var i = 0; i < 10; i++) {
@@ -129,7 +101,6 @@ function randomMode() {
     col[i][2] = Math.round(col1[2] - dif[2] * i);
   }
   paper();
-  localStorage.setItem("color", JSON.stringify(col));
 }
 
 function customModeOpen() {
@@ -154,7 +125,6 @@ function update() {
     col[i][2] = blue(c);
   }
   paper();
-  localStorage.setItem("color", JSON.stringify(col));
 }
 
 function customModeClose() {
@@ -180,12 +150,12 @@ function load_disqus() {
 
   // Load script asynchronously only when the trigger and target exist
   if (disqus_target) {
-      // DON'T EDIT BELOW THIS LINE
-      var d = document,
-          s = d.createElement("script");
-      s.src = "https://raullazaro.disqus.com/embed.js";
-      s.setAttribute("data-timestamp", +new Date());
-      (d.head || d.body).appendChild(s);
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement("script");
+    s.src = "https://raullazaro.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
   }
 }
 
