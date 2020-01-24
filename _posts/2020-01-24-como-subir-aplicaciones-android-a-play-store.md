@@ -10,7 +10,7 @@ description: >-
   configuraciones necesarias para hacerla funcionar con Firebase y los distintos
   métodos de login.
 tags:
-  - Android
+  - android
 ---
 Has desarrollado una app, ya la has probado bien en el emulador o quizás en tu móvil conectándolo por cable a tu ordenador y todo funciona perfecto. Ahora viene el siguiente paso, **publicarla en la Play Store!!**
 
