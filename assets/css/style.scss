@@ -217,19 +217,17 @@ html.is-animating .transition-fade {
   background-color: white;
 }
 
-.web-card {
-  background-color: rgba(128, 128, 128, 1) !important;
-  border: 10px solid rgba(128, 128, 128, 1);
-  border-radius: 5px;
-}
-
 #web-url {
   background-color: #ffffff;
-  color: #000000;
+  color: #3366BB;
   border-radius: 4px;
   padding: 3px;
   margin: auto;
   margin-top: 5px;
+}
+
+#web-url:hover {
+  text-decoration: underline;
 }
 
 .map{
